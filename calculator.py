@@ -13,17 +13,17 @@ def hypotenuse(a,b):
         return 'a or b is negative'
 
 def add(a,b):
-    return a+b
+    return a + b
 
 def subtract(a, b):
     return a-b
 
-def multiply(a, b):
-    return a*b
+def mul(a, b):
+    return a * b
 
-def division(a, b):
+def div(a, b):
     if a == 0:
-        raise ZeroDivisionError("Division by zero")
+        raise ZeroDivisionError("a can not me 0")
     return b/a
 
 def logarithm(a, b):
@@ -34,7 +34,7 @@ def logarithm(a, b):
     return math.log(a,b)
 
 
-def exponential(a, b):
+def exp(a, b):
     return a**b
 
 
