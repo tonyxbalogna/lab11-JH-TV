@@ -34,6 +34,7 @@ def logarithm(a, b):
         return 'a or b is negative or b is one'
 
 
+
 def exp(a, b):
     return a**b
 
