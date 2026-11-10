@@ -15,7 +15,7 @@ def div(a, b):
     return b/a
 
 def logarithm(a, b):
-    if b <= 0:
+    if  <= 0:
         raise ValueError("log argument must be positive")
     elif a < 0 or a == 1:
         raise ValueError("log base cant equal one or be negative")
