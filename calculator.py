@@ -29,7 +29,7 @@ def div(a, b):
 
 def logarithm(a, b):
     try:
-        return math.log(a,b)
+        return math.log(b,a)
     except ValueError:
         return 'a or b is negative or a is one'
 
