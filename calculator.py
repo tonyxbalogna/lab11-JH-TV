@@ -1,21 +1,33 @@
 import math
 
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ValueError:
+        return 'a is negative'
+
+def hypotenuse(a,b):
+    try:
+        return math.hypot(a,b)
+    except ValueError:
+        return 'a or b is negative'
+
 
 def add(a,b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
-def div(a, b):
+def division(a, b):
     if a == 0:
-        raise ZeroDivisionError("a can not me 0")
+        raise ZeroDivisionError("a cannot be 0")
     return b/a
 
-def log(a, b):
+def logarithm(a, b):
     if b <= 0:
         raise ValueError("log argument must be positive")
     elif a < 0 or a == 1:
@@ -23,7 +35,7 @@ def log(a, b):
     return math.log(a,b)
 
 
-def exp(a, b):
+def exponential(a, b):
     return a**b
 
 
