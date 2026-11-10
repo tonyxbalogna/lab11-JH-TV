@@ -31,7 +31,7 @@ def logarithm(a, b):
     try:
         return math.log(b,a)
     except ValueError:
-        return 'a or b is negative or a is one'
+        return 'a or b is negative or b is one'
 
 
 def exp(a, b):
