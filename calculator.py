@@ -22,16 +22,16 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    try:
-        return b / a
-    except ZeroDivisionError:
-        return 'Division by zero'
+    if a == 0:
+        raise ZeroDivisionError("a cannot be 0")
+    return b/a
 
 def logarithm(a, b):
-    try:
-        return math.log(b,a)
-    except ValueError:
-        return 'a or b is negative or b is one'
+    if a <= 0:
+        raise ValueError("log argument must be positive")
+    elif b < 0 or b == 1:
+        raise ValueError("log base cant equal one or be negative")
+    return math.log(b,a)
 
 
 
