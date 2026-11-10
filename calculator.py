@@ -28,11 +28,10 @@ def div(a, b):
         return 'Division by zero'
 
 def logarithm(a, b):
-    if b <= 0:
-        raise ValueError("log argument must be positive")
-    elif a < 0 or a == 1:
-        raise ValueError("log base cant equal one or be negative")
-    return math.log(a,b)
+    try:
+        return math.log(a,b)
+    except ValueError:
+        return 'a or b is negative or a is one'
 
 
 def exp(a, b):
