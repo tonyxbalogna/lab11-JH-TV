@@ -2,17 +2,17 @@ import math
 
 
 def add(a,b):
-    return a + b
+    return a+b
 
 def subtract(a, b):
-    return a - b
+    return a-b
 
 def multiply(a, b):
-    return a * b
+    return a*b
 
 def division(a, b):
     if a == 0:
-        raise ZeroDivisionError("a cannot be 0")
+        raise ZeroDivisionError("Division by zero")
     return b/a
 
 def logarithm(a, b):
