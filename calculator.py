@@ -1,5 +1,17 @@
 import math
 
+def square_root(a):
+    try:
+        return math.sqrt(a)
+    except ValueError:
+        return 'a is negative'
+
+def hypotenuse(a,b):
+    try:
+        return math.hypot(a,b)
+    except ValueError:
+        return 'a or b is negative'
+
 def add(a,b):
     return a + b
 
@@ -10,16 +22,16 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if a == 0:
-        raise ZeroDivisionError("a can not me 0")
-    return b/a
+    try:
+        return b / a
+    except ZeroDivisionError:
+        return 'Division by zero'
 
 def logarithm(a, b):
-    if  <= 0:
-        raise ValueError("log argument must be positive")
-    elif a < 0 or a == 1:
-        raise ValueError("log base cant equal one or be negative")
-    return math.log(a,b)
+    try:
+        return math.log(b,a)
+    except ValueError:
+        return 'a or b is negative or b is one'
 
 
 def exp(a, b):
