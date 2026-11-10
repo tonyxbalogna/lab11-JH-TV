@@ -2,27 +2,28 @@ import math
 
 
 def add(a,b):
-    return a+b
+    return a + b
 
-def subtract(a,b):
-    return a-b
+def sub(a, b):
+    return a - b
 
-def multiply(a,b):
-    return a*b
+def mul(a, b):
+    return a * b
 
-def divide(a,b):
+def div(a, b):
     if a == 0:
-        raise ZeroDivisionError("Division by zero")
-    else:
-        return b/a
+        raise ZeroDivisionError("a can not me 0")
+    return b/a
 
-def logarithm(a,b):
-    if b <= 0 or a <= 0 or a == 1:
-        raise ValueError(f"{b} less than 0 or {a} is 1 or {a} is less than 0")
-    else:
-        return math.log(a,b)
+def log(a, b):
+    if b <= 0:
+        raise ValueError("log argument must be positive")
+    elif a < 0 or a == 1:
+        raise ValueError("log base cant equal one or be negative")
+    return math.log(a,b)
 
-def exponential(a,b):
+
+def exp(a, b):
     return a**b
 
 
