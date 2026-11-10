@@ -4,7 +4,7 @@ def square_root(a):
     try:
         return math.sqrt(a)
     except ValueError:
-        return 'a is negative'
+        raise ValueError('a is negative')
 
 def hypotenuse(a,b):
     try:
